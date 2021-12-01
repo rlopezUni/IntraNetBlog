@@ -14,7 +14,7 @@
 						</div>
 
 
-						<h1 class="text-4xl text-white leading-8 font-bold mt-2">
+						<h1 class="text-4xl text-{{$post->color}} leading-8 font-bold mt-2">
 							<a href="{{route('posts.show',$post)}}">
 								{{$post->name}}
 							</a>

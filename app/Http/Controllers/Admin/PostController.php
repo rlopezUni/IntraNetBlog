@@ -38,7 +38,19 @@ class PostController extends Controller
     {
         $categories = Category::pluck('name','id');
         $tags = Tag::all();
-        return view('admin.posts.create',compact('categories','tags'));
+        $colors = [
+            'white' => 'Color Blanco',
+            'black-600' => 'Color Blanco',
+            'red-600' => 'Color Rojo',
+            'yellow-600' => 'Color Amarillo',
+            'green-600' => 'Color Verde',
+            'blue-600' => 'Color Azul',
+            'indigo-600' => 'Color Indigo',
+            'purple-600' => 'Color Morado',
+            'pink-600' => 'Color Rosado'
+
+        ];
+        return view('admin.posts.create',compact('categories','tags','colors'));
     }
 
     /**
@@ -94,7 +106,19 @@ class PostController extends Controller
         $this->authorize('author',$post);
         $categories = Category::pluck('name','id');
         $tags = Tag::all();
-        return view('admin.posts.edit',compact('post','categories','tags'));
+        $colors = [
+            'white' => 'Color Blanco',
+            'black-600' => 'Color Negro',
+            'red-600' => 'Color Rojo',
+            'yellow-600' => 'Color Amarillo',
+            'green-600' => 'Color Verde',
+            'blue-600' => 'Color Azul',
+            'indigo-600' => 'Color Indigo',
+            'purple-600' => 'Color Morado',
+            'pink-600' => 'Color Rosado'
+
+        ];
+        return view('admin.posts.edit',compact('post','categories','tags','colors'));
     }
 
     /**
