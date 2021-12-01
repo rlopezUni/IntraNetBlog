@@ -7,7 +7,7 @@
 <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.tags.create')}}">Nueva Etiqueta</a>
 @endcan
 
-    <h1>Listado de etiquitas</h1>
+    <h1>Listado de etiquetas</h1>
 @stop
 
 @section('content')
