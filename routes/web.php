@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\NpsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,15 +15,18 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', [PostController::class, 'index'])->name('posts.index');
+Route::resource('nps',NpsController::class)->names('nps');
 Route::group(['middleware' => ['auth']], function () {
 
-Route::get('/', [PostController::class, 'index'])->name('posts.index');
+
 Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
 Route::get('category/{category}', [PostController::class, 'category'])->name('posts.category');
 
 Route::get('tag/{tag}', [PostController::class, 'tag'])->name('posts.tag');
+
+
 
 
 
