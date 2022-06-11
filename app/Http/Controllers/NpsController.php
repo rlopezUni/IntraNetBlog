@@ -36,7 +36,7 @@ class NpsController extends Controller
     public function store(Request $request)
     {
         $encuesta = new EncuestaDocente();
-        $encuesta->correo = $request->correo;
+        $encuesta->correo = $request->plantel;
         $encuesta->respuesta = $request->respuesta;
         $encuesta->otraPregunta = $request->otraPregunta1 . $request->otraPregunta2 . $request->otraPregunta3;
         $encuesta->save();

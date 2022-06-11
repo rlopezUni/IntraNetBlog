@@ -26,18 +26,26 @@
                                     <div class="col-md-12">
                                         <br>
                                         <center>
-                                            <h4>¿Recomendarias a un familiar o conocido la universidad Univer?
+                                            <h4><b>¿Recomendarias a un familiar o conocido la universidad Univer?
 Contesta del 1 al 10,
 Donde 1 es lo más bajo, es decir no recomendarías a Univer
-10 es lo más alto, totalmente recomendaría a Univer.</h4>
+10 es lo más alto, totalmente recomendaría a Univer.</b></h4>
                                         </center>
                                     </div>
                                     
                                    
 
                                     <div class="col-md-4">
-                                        <label for="correo">correo Institucional</label>
-                                        <input id="correo" type="email" placeholder="Correo" class="form-control" name="correo"  required autofocus>
+                                        <label for="plantel">Plantel</label>
+                                        <select  id="plantel" name="plantel" class="form-control selectpicker "data-live-search="true">
+                                             <option value="Tlaquepaque">Tlaquepaque</option>
+                                             <option value="Jardines del Bosque">Jardines del Bosque</option>
+                                             <option value="Ávila Camacho">Ávila Camacho</option>
+                                             <option value="Centro Histórico">Centro Histórico</option>
+                                             <option value="Loma Bonita">Loma Bonita</option>
+                                             <option value="Tonalá">Tonalá</option>
+                                             <option value="Online">Online</option>
+                                        </select>
                                     </div>
 
                                     <div class="col-md-4">
