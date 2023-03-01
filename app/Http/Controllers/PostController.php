@@ -63,14 +63,14 @@ class PostController extends Controller
         $similares = Post::where('category_id',$post->category_id)
         ->where('status',2)->where('id','!=',$post->id)->latest('id')->take(4)->get();
 
-        $ultimosCuatro = $post->userToPost()->where('post_id',$post->id)->get();
+       
         //dd($ultimosCuatro);
     
     if(!$post->userToPost()->where('post_id',$post->id)->where('user_id',auth()->id())->first())
     {
         $post->userToPost()->attach(auth()->id());
     }
-       
+        $ultimosCuatro = $post->userToPost()->where('post_id',$post->id)->get();
 
      
         return view('posts.show',compact('post','similares','ultimosCuatro'));
