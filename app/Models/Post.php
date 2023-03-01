@@ -27,6 +27,10 @@ class Post extends Model
         return $this->belongsToMany(Tag::class);
     }
 
+    public function userToPost(){
+        return $this->belongsToMany(User::class,'user_posts');
+    }
+
 
 // relacion uno  a uno polimor
 

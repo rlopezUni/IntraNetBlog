@@ -44,6 +44,22 @@
             </ul>
         </aside>
 
+        <aside>
+            <h1 class="text-2x1 font-bold text-gray-600 mb-4">Usuarios que lo vieron</h1>
+            <ul>
+                @foreach ($ultimosCuatro as $ultimosCuatro)
+                    <li class="mb-4">
+                        
+                            
+                            
+
+                            <span class="ml-2 text-gray-600">{{$ultimosCuatro->name}}</span>
+                            
+                        </li>
+                @endforeach
+            </ul>
+        </aside>
+
     </div>
 
   </div>
