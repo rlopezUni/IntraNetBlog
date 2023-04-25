@@ -64,9 +64,13 @@
         <div class="image-wrapper">
             @isset ($post->image)
             <img id="picture" src="{{Storage::url($post->image->url)}}">
+            <h1 id="previ" style="position: absolute; top: 50%; left: 10%;" class="text-4xl  leading-8 font-bold mt-2"></h1>
             @else
             <img id="picture" src="https://static1.educaedu.com.mx/adjuntos/9/00/53/universidad-univer-005399_large.jpg" alt="">
+            <h1 id="previ" style="position: absolute; top: 50%; left: 10%;" class="text-4xl  leading-8 font-bold mt-2"></h1>
             @endisset
+
+           
          
      </div>
      </div>
@@ -81,7 +85,10 @@
  <small class="text-danger">{{$message}}</small>
 @enderror
 </div>
-    </div>
+
+</div>
+
+
 </div>
 
 <div class="form-group">
@@ -97,4 +104,6 @@
  @error('body')
  <small class="text-danger">{{$message}}</small>
 @enderror
+
+
 </div>

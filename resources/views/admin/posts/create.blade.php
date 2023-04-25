@@ -8,6 +8,8 @@
 
 @section('content')
     <div class="card">
+        
+        
         <div class="card-body">
             {!! Form::open(['route' => 'admin.posts.store','autocomplete' => 'off','files' => true]) !!}
 
@@ -15,7 +17,7 @@
             
             @include('admin.posts.partials.form')
 
-               {!! Form::submit('Crear Post',['class' => 'btn btn-primary'])  !!}
+                {!! Form::submit('Crear Post',['class' => 'btn btn-primary'])  !!}
 
             {!! Form::close() !!}
         </div>
@@ -79,6 +81,124 @@ ClassicEditor
 
             reader.readAsDataURL(file);
         }
+
+        $( "#name" ).on( "change", function() {
+            var nombre = $("#name").val();
+           var color = $("#color").val();
+           $("#previ").removeClass();
+           $("#previ").addClass("text-4xl  leading-8 font-bold mt-2");
+          
+        $("#previ").text(nombre);
+  
+        $("#previ").addClass("text-"+color); //blanco
+        
+        if (color == "black-600") {
+            color = "black";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "red-600") {
+            color = "red";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "yellow-600") {
+            color = "yellow";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "green-600") {
+            color = "green";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "blue-600") {
+            color = "blue";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "indigo-600") {
+            color = "indigo";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "purple-600") {
+            color = "purple";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "pink-600") {
+            color = "pink";
+            $("#previ").addClass("text-"+color);
+        }
+
+
+
+
+        }
+        ); 
+
+        $( "#color" ).on( "change", function() {
+            var nombre = $("#name").val();
+           var color = $("#color").val();
+           $("#previ").removeClass();
+           $("#previ").addClass("text-4xl  leading-8 font-bold mt-2");
+          
+        $("#previ").text(nombre);
+  
+        $("#previ").addClass("text-"+color); //blanco
+        
+        if (color == "black-600") {
+            color = "black";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "red-600") {
+            color = "red";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "yellow-600") {
+            color = "yellow";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "green-600") {
+            color = "green";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "blue-600") {
+            color = "blue";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "indigo-600") {
+            color = "indigo";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "purple-600") {
+            color = "purple";
+            $("#previ").addClass("text-"+color);
+        }
+
+        if (color == "pink-600") {
+            color = "pink";
+            $("#previ").addClass("text-"+color);
+        }
+
+
+
+
+        }
+
+        );
+
+
+
  </script>
+
+ 
     
 @endsection

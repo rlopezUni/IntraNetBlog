@@ -40,7 +40,7 @@ class PostController extends Controller
         $tags = Tag::all();
         $colors = [
             'white' => 'Color Blanco',
-            'black-600' => 'Color Blanco',
+            'black-600' => 'Color Negro',
             'red-600' => 'Color Rojo',
             'yellow-600' => 'Color Amarillo',
             'green-600' => 'Color Verde',
@@ -59,10 +59,12 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    
     public function store(StorePostRequest $request)
     {
        //return Storage::put('public/posts',$request->file('file'));
-        
+ 
 
         $post = Post::create($request->all());
 

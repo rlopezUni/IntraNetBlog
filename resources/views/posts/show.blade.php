@@ -6,6 +6,15 @@
         {!!$post->extract!!}
     </div>
 
+    <div>
+        <h2 class="text-2x1 font-bold text-gray-600 mb-4">Creado por:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFecha:</h2>
+        <span class="ml-2 text-gray-600">{{$post->user->name}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{$post->created_at}}</span>
+
+        
+
+
+    </div>
+
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {{-- contenido pricipal --}}
         <div class="lg:col-span-2">
@@ -58,6 +67,7 @@
                         </li>
                 @endforeach
             </ul>
+
         </aside>
 
     </div>
